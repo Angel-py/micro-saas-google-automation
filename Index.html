@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <base target="_top">
+    <?!= include('CSS'); ?>
+  </head>
+  <body>
+    <header style="background-color: #040025; color: white; padding: 20px; text-align: center;">
+      <h1>Agendador Técnico</h1>
+    </header>
+
+    <div class="container">
+      
+      <div class="split-view left">
+        <h3>Disponibilidad RR.HH</h3>
+          <div id="calendar-view">
+            <iframe src="https://calendar.google.com/calendar/embed?src=angelmelo0312%40gmail.com&ctz=America%2FCaracas" 
+                style="border: 0" width="100%" height="500" frameborder="0" scrolling="no">
+            </iframe>
+          </div>
+      </div>
+
+      
+      <div class="split-view right">
+        <h3>Nueva Entrevista</h3>
+        
+        <form id="appointmentForm">
+          <input type="text" id="nombreCandidato" placeholder="Nombre del Candidato" required>
+          <input type="text" id="rol" placeholder="Rol" required>
+          <input type="email" id="emailEntrevistador" placeholder="Email" required>
+          <input type="datetime-local" id="fechaHora" required>
+
+          <button type="submit" style="background-color: #2885FF;"> AGENDAR </button>
+        </form>
+      </div>
+    </div>
+
+    <?!= include('JS'); ?>
+  </body>
+</html>

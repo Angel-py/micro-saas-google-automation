@@ -1,0 +1,47 @@
+
+
+<script>
+  document.getElementById('appointmentForm').addEventListener('submit', function(e) {
+    e.preventDefault(); 
+    
+    const btn = e.target.querySelector('button');
+    btn.disabled = true;
+    btn.innerText = "Generando invitación...";
+    btn.style.backgroundColor = "#ccc";
+
+    
+    const datos = {
+      nombreCandidato: document.getElementById('nombreCandidato').value,
+      rol: document.getElementById('rol').value,
+      emailEntrevistador: document.getElementById('emailEntrevistador').value,
+      fechaHora: document.getElementById('fechaHora').value
+    };
+
+    
+    google.script.run
+      .withSuccessHandler(function(mensaje) {
+        alert("✅ " + mensaje);
+        btn.disabled = false;
+        btn.innerText = "AGENDAR";
+        btn.style.backgroundColor = "#2885FF";
+        document.getElementById('appointmentForm').reset();
+      })
+      .withFailureHandler(function(err) {
+        alert("❌ Error: " + err);
+        btn.disabled = false;
+        btn.innerText = "REINTENTAR";
+      })
+      .procesarAgendado(datos); 
+  });
+
+window.onload = function() {
+  const email = "Correo@gmail.com";
+  
+  const calendarUrl = "https://calendar.google.com" + encodeURIComponent(email) + "&ctz=America%2FCaracas&mode=WEEK";
+  
+  const container = document.getElementById('calendar-view');
+  if(container) {
+    container.innerHTML = `<iframe src="" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>`;
+  }
+};
+</script>
