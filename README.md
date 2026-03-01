@@ -36,7 +36,7 @@ Para replicar este proyecto en tu entorno de Google Workspace:
 5. Implementa como **Aplicación Web** con acceso para "Cualquier persona".
 
 ## 📺 Demo y Resultados
-- **Video Explicativo:** 
+- **Video Explicativo:** (https://youtu.be/IdTZnaPUNpQ)
 - **Web App Funcional:** (https://script.google.com/macros/s/AKfycbzqjSwdFoWyyZq-71hmxbsNYSS-XtuAf14-xGUKTm5Nm6FNG-5fXagt1jNuTLMhO03ILQ/exec)
 
 ---
