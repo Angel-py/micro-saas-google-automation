@@ -33,7 +33,7 @@ Para replicar este proyecto en tu entorno de Google Workspace:
 2. Copia los archivos de este repositorio en el editor.
 3. Configura tu `API_KEY` de OpenRouter en el archivo `IA.gs`.
 4. En **Google Calendar**, asegúrate de que el calendario de RR.HH. sea "Público" o compartido con los permisos necesarios.
-5. Implementa como **Aplicación Web** con acceso para "Cualquier persona".
+
 
 ## 📺 Demo y Resultados
 - **Video Explicativo:** (https://youtu.be/IdTZnaPUNpQ)
